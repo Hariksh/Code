@@ -1,0 +1,4 @@
+n = int(input())
+d = int(input())
+total_flowers = n * (2**d)
+print(total_flowers)
