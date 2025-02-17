@@ -1,0 +1,9 @@
+age = int(input())
+
+is_citizen = input("")
+
+if age>= 18 and is_citizen=="Y":
+    print("You are eligible to vote.")
+
+else:
+    print("You are not eligible to vote.")
