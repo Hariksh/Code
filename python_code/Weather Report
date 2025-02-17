@@ -1,0 +1,19 @@
+temp = int(input())
+
+if temp < 0:
+    print("The weather today is classified as: Freezing Weather")
+
+elif temp <= 9:
+    print("The weather today is classified as: Very Cold")
+
+elif temp <= 19:
+    print("The weather today is classified as: Cold")
+
+elif temp <=29:
+    print("The weather today is classified as: Normal")
+
+elif temp <=39:
+    print("The weather today is classified as: Hot")
+
+else:
+    print("The weather today is classified as: Very Hot")
