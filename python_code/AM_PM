@@ -1,0 +1,7 @@
+time = int(input())
+
+if 0<=time<12:
+    print("AM")
+
+else:
+    print("PM")
