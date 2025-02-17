@@ -1,0 +1,13 @@
+str3 = str1 + str2
+
+console.log(`Concatenated String: ${str3}`)
+console.log(`Length of String: ${str3.length}`)
+// if (str1 == str2) {
+// console.log(`Are strings equal?: true`)
+// }
+// else {
+//     console.log(`Are strings equal?: false`)
+// }
+
+let equal = (str1 == str2) ? `Are strings equal?: ${true}`:`Are strings equal?: ${false}`
+console.log(equal)
