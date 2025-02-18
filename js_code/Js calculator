@@ -1,0 +1,33 @@
+switch(sign){
+    case "+":
+        console.log(a+b)
+        break
+    
+    case "-":
+        console.log(a-b)
+        break
+    
+    case "*":
+        console.log(a*b)
+        break
+
+    case "/":
+        if (b !== 0) {
+        console.log(a / b);  
+        } else {
+        console.log("Invalid operation");
+        }
+        break;
+
+    case "%":
+        if (b !== 0) {
+        console.log(a % b);  
+        } else {
+        console.log("Invalid operation");
+        }
+        break;
+
+    default:
+        console.log("Invalid operation")
+        break
+}
