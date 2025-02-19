@@ -1,0 +1,13 @@
+def calculate_percentage(s1, s2, s3):
+   
+    total_marks = s1+s2+s3
+    percentage = ((s1+s2+s3)/300)*100
+    print(total_marks)
+    print(percentage)
+
+s1 = int(input())
+s2 = int(input())
+s3 = int(input())
+
+
+calculate_percentage(s1, s2, s3)
