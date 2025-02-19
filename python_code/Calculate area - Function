@@ -1,0 +1,8 @@
+def calculate_area(length, breadth):
+   area = length * breadth
+   return area
+
+length = int(input())
+breadth= int(input())
+
+print(calculate_area(length,breadth))
