@@ -1,0 +1,11 @@
+def calculateCost(W):
+    if W <= 5:
+        return 5
+    elif W <= 15:
+        return 10
+    elif W <= 25:
+        return 15
+    elif W <= 40:
+        return 25
+    else:
+        return 40
