@@ -1,0 +1,12 @@
+def tic_tac_toe(player1, player2):
+    if player1=="R" or player2=="R":
+        print('R')
+    elif player1=='J':
+        print(player2)
+    elif player2=='J':
+        print(player1)
+    else:
+        print('D')
+
+player1, player2 = input().split()
+tic_tac_toe(player1,player2)
