@@ -1,0 +1,13 @@
+def grades(a, b, c, d, e):
+    total_marks=a+b+c+d+e
+    percentage=total_marks/500*100
+    if percentage>=80:
+        return "A"
+    elif percentage>=60:
+        return "B"
+    elif percentage>=40:
+        return "C"
+    else:
+        return "D"
+
+    pass
