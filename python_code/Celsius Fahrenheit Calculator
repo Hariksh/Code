@@ -1,0 +1,13 @@
+def Celsius_to_degrees_Fahrenheit(t):
+    return round ((t*(9/5)+32),4)
+
+
+def Fahrenheit_to_degrees_Celsius(t):
+    return round ((t - 32) * 5/9,4)
+
+is_Fahrenheit = int(input())
+temp = float(input())
+if is_Fahrenheit==0:
+    print(Celsius_to_degrees_Fahrenheit(temp))
+else:
+    print(Fahrenheit_to_degrees_Celsius(temp))
