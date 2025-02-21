@@ -1,0 +1,8 @@
+'''def isArmstrong(N):
+    A = str(N)
+    B = len(A) 
+    armstrong_sum = 0  
+    for i in A:
+        armstrong_sum += int(i) ** B 
+
+    return armstrong_sum == N'''
