@@ -1,0 +1,10 @@
+def min_max_digits(n):
+  
+    number = [int(d) for d in str(n)]
+    
+
+    min_digit = min(number)
+    max_digit = max(number)
+    
+   
+    return min_digit, max_digit
