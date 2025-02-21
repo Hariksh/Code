@@ -6,3 +6,16 @@
         armstrong_sum += int(i) ** B 
 
     return armstrong_sum == N'''
+
+def isArmstrong(N):
+    order = len(str(N))
+    sum_ = 0
+    original = N
+    while N>0:
+        digit = N % 10
+        sum_ += digit ** order
+        N= N// 10
+    if sum_ == original:
+        return True
+    else:
+        return False
