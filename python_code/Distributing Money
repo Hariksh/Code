@@ -1,0 +1,8 @@
+def distributingMoney(x,y,z,k) : 
+    if(x+y+z+k)% 3 == 0 and (x+y+z+k)/3 >= max(x,y,z):
+        return 1
+    else:
+        return 0
+    
+x,y,z,k= map(int,input().split());
+print (int(distributingMoney(x,y,z,k)))
