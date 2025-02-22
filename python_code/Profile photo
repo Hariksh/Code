@@ -1,0 +1,8 @@
+def Photo(L, W, H):
+    if W<L or H<L:
+        return("UPLOAD ANOTHER")
+    elif W>=L and H>=L:
+        if W==H:
+            return("ACCEPTED")
+        else:
+            return("CROP IT")
