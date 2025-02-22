@@ -1,0 +1,9 @@
+def Knight(X,Y):
+    moves=[(X+2,Y+1),(X+2,Y-1),
+           (X-2,Y+1),(X-2,Y-1),
+           (X+1,Y+2),(X+1,Y-2),
+           (X-1,Y+2),(X-1,Y-2)]
+    valid_moves=[(X_new,Y_new)for X_new,Y_new in moves     
+    if 1 <= X_new <= 8 and 1 <= Y_new <= 8]
+
+    return len (valid_moves)
