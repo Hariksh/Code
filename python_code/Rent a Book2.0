@@ -1,0 +1,9 @@
+X = int(input())
+D = int(input())
+S = input()
+
+if D>7 and S =="false":
+    print((D-7)*2+X)
+
+else:
+    print(X)
