@@ -1,0 +1,34 @@
+'''N= int(input())
+spaces = 2 * N - 1
+stars = 0
+for i in range(1, 2 * N):
+	if i <= n:
+		spaces = spaces - 2
+		stars += 1
+	else:
+		spaces = spaces + 2
+		stars -= 1
+
+	for j in range(1, stars + 1):
+		print("*", end="")
+
+	for j in range(1, spaces + 1):
+		print(" ", end="")
+
+	for j in range(1, stars + 1):
+		if j != n:
+			print("*", end="")
+
+	print()'''
+
+r = int(input())
+for i in range(1, r+1):
+    print("*"*i, end="")
+    print(" "*(r-i)*2, end=" ")
+    print("*"*i)
+
+# Lower Triangles
+for i in range(r-1,0,-1):
+    print("*"*i, end="")
+    print(" "*(r-i)*2, end=" ")
+    print("*"*(i))
