@@ -1,0 +1,31 @@
+def modify_list(num):
+    index, value = map(int, input().split())
+    if 0 <= index < len(num):
+        num[index] = value
+    print(num)
+
+    value = int(input())
+    num.append(value)
+    print(num)
+
+    index, value = map(int, input().split())
+    if 0 <= index <= len(num):
+        num.insert(index, value)
+    print(num)
+
+    value1, value2 = map(int, input().split())
+    num.extend([value1, value2])
+    print(num)
+
+    value = int(input())
+    if value in num:
+        num.remove(value)
+    print(num)
+
+    index = int(input())
+    if 0 <= index < len(num):
+        num.pop(index)
+    print(num)
+
+    num.clear()
+    print(num)
