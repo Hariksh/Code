@@ -1,0 +1,22 @@
+def modify_holidays(holidays):
+
+    holidays[3] = "Good Friday" 
+    print(holidays)
+
+    holidays.append("Eid")  
+    print(holidays)
+    
+    holidays.insert(2, "Makar Sankranti")  
+    print(holidays)
+    
+    holidays.extend(["Christmas", "Gandhi Jayanti"]) 
+    print(holidays)
+
+    holidays.remove("Eid")  
+    print(holidays)
+
+    holidays.remove("Independence Day")  
+    print(holidays)
+
+    holidays.clear()  
+    print(holidays)
