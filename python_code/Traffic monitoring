@@ -1,0 +1,7 @@
+traffic_data = list(map(int, input().split()))
+
+max_value = max(traffic_data)
+min_value = min(traffic_data)
+total_sum = sum(traffic_data)
+
+print(max_value, min_value, total_sum)
