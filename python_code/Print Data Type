@@ -1,0 +1,12 @@
+a=5
+b=6.78
+c="Ram"
+d="a"
+
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+
+a = float(a)
+print(type(a))
