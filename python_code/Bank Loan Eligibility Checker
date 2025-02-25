@@ -1,0 +1,13 @@
+a = int(input())
+b = int(input())
+c = int(input())
+if 21<=a<=55 and b>=700000 and c>=750:
+    print("Eligible")
+elif a<21:
+    print('Not Eligible - Age is less than 21 years')
+elif a>55:
+    print("Not Eligible - Age is more than 55 years")
+elif b<700000:
+    print("Not Eligible - Income is less than 7 lakhs")
+elif c<750:
+    print("Not Eligible - Credit score is less than 750")
