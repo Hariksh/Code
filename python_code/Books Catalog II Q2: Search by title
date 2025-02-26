@@ -1,0 +1,5 @@
+def search_book_by_title(book_catalog, title):
+    for book in book_catalog:
+        if book[0] == title:
+            return book
+    return None
