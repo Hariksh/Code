@@ -1,0 +1,5 @@
+def weekend_trip(is_feeling_sad, is_mid_term_break, is_weekend):
+    if is_feeling_sad==1 or is_mid_term_break==1 or is_weekend==1:
+        return "Lets Go Vrindavan"
+    else:
+        return "Lets study PSP"
