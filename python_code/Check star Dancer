@@ -1,0 +1,6 @@
+def check_star_dancer(n):
+    a = int(n**0.5)
+    if a * a == n:
+        print("You are the Star Dancer")
+    else:
+        print("Keep Dancing")
