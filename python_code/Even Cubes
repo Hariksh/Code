@@ -1,0 +1,9 @@
+numbers = list(map(int, input().split()))
+
+'''cubes_of_evens = [x ** 3 for x in numbers if x % 2 == 0]
+
+print(*cubes_of_evens)'''
+cubes = []
+for x in numbers:
+    if x % 2 == 0:
+        print(x ** 3, end = " ")
