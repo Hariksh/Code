@@ -1,0 +1,5 @@
+student_names = input().split()
+
+filtered_names = [name for name in student_names if name.startswith('A')]
+
+print(' '.join(filtered_names))
