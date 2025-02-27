@@ -1,0 +1,9 @@
+inventory = input().split()
+serial_number = input()
+
+count = inventory.count(serial_number)
+
+first_index = inventory.index(serial_number) if serial_number in inventory else "Element not exist"
+
+print(count)
+print(first_index)
