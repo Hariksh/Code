@@ -1,0 +1,12 @@
+transactions = list(map(int, input().split()))
+
+last_loss_index = -1
+
+for i in range(len(transactions)):
+    if transactions[i] < 0:
+        last_loss_index = i  
+
+if last_loss_index == -1:
+    print("No Loss")
+else:
+    print(last_loss_index)
