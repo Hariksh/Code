@@ -1,0 +1,10 @@
+prices = list(map(int, input().split()))
+
+sorted_prices = sorted(prices)
+print(*sorted_prices) 
+
+prices.sort()
+print(*prices) 
+
+prices.reverse()
+print(*prices)
