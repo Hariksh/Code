@@ -1,0 +1,7 @@
+def squares_of_evens(numbers):
+    '''return [num ** 2 for num in numbers if num % 2 == 0]'''
+    squares_evens = []
+    for num in numbers:
+        if num % 2 == 0:
+            squares_evens.append( num ** 2 )
+    return squares_evens
