@@ -1,0 +1,6 @@
+def remove_element(tup, value):
+    temp_list = list(tup)
+    
+    temp_list = [x for x in temp_list if x != value]
+    
+    return tuple(temp_list)
