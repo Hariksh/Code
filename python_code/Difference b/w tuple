@@ -1,0 +1,7 @@
+def tuple_difference(tup1, tup2):
+
+    set_tup2 = set(tup2)
+
+    tup3 = tuple(x for x in tup1 if x not in set_tup2)
+    
+    return tup3
