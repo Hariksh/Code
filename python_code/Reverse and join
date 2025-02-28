@@ -1,0 +1,8 @@
+s = input()
+lis = s.split()
+ans = ''
+
+for i in range(len(lis)-1,-1,-1):
+    ans = ans + lis[i] + " "
+
+print(ans)
