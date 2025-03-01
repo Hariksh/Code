@@ -1,0 +1,8 @@
+string = input().strip()
+substring = input().strip()
+
+if not string or not substring:
+    print("In-valid")
+else:
+    count = string.lower().count(substring.lower())
+    print(f"The substring '{substring}' occurs {count} times in the string.")
