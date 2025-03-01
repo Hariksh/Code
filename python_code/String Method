@@ -1,0 +1,9 @@
+s = input()
+s1 = input()
+s2 = input()
+n = int(input())
+
+modified_s = s.replace(s1, s2)
+print(modified_s)
+print(ord(modified_s[0]))
+print(chr(n))
