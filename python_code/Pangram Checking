@@ -1,0 +1,6 @@
+def ispangram(s):
+    s = s.lower()
+    for letter in 'abcdefghijklmnopqrstuvwxyz':
+        if letter not in s:
+            return False
+    return True
