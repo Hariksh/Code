@@ -1,0 +1,12 @@
+string = input().strip()
+print("".join(char for char in string if char.lower() not in "aeiou"))
+
+
+
+# s = input()
+# vowels = set("aeiouAEIOU")
+# result = ""
+# for char in s:
+#     if char not in vowels:
+#         result += char
+# print(result)
