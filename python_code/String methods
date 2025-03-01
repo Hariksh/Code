@@ -1,0 +1,10 @@
+text = input()
+
+print(len(text))
+print(text.lower())
+print(text.upper())
+print(text.strip())
+print(text.split())
+print(" ".join(text.split()))
+print(text.isdigit())
+print(text.isalpha())
