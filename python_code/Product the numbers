@@ -1,0 +1,4 @@
+expression = input()
+a, b_plus_c = expression.split('*')
+b, c = b_plus_c.split('+')
+print(int(a) * int(b) * int(c))
