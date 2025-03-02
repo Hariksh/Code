@@ -1,0 +1,10 @@
+n = int(input())
+
+book_catalog = {}
+
+for _ in range(n):
+    book = input().strip()
+    pages = int(input().strip())
+    book_catalog[book] = pages - 100  
+
+print(book_catalog)
