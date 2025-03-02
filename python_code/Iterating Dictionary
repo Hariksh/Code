@@ -1,0 +1,14 @@
+m = int(input())
+book_catalog = {}
+for i in range(m):
+    book = input()
+    num_pages = int(input())
+    book_catalog[book] = num_pages
+
+n = int(input())
+filtered_catalog = {}
+for b, p in book_catalog.items():
+    if p <= n:
+        filtered_catalog[b] = p 
+
+print(filtered_catalog)
