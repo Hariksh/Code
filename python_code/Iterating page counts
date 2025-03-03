@@ -1,0 +1,13 @@
+book_catalog = {}
+n = int(input())
+
+for _ in range(n):
+    book_title = input().strip()
+    page_count = int(input().strip())
+    book_catalog[book_title] = page_count
+
+for book in book_catalog:
+    if book_catalog[book] % 2 == 0:
+        book_catalog[book] = 0
+
+print(book_catalog)
