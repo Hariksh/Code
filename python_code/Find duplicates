@@ -1,0 +1,10 @@
+def find_duplicates(nums):
+    count_dict = {}
+
+    for num in nums:
+        if num in count_dict:
+            count_dict[num] += 1
+        else:
+            count_dict[num] = 1
+    duplicates = [num for num, count in count_dict.items() if count > 1]
+    return sorted(duplicates)
