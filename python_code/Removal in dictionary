@@ -1,0 +1,19 @@
+student_data = {}
+
+for _ in range(4):
+    line = input().strip().split()
+    key = line[0]
+    value = line[1]
+    student_data[key] = value
+
+del student_data["age"]
+print(student_data)
+
+student_data.pop("name")
+print(student_data)
+
+student_data.popitem()
+print(student_data)
+
+student_data.clear()
+print(student_data
