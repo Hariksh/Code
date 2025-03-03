@@ -1,0 +1,11 @@
+book_catalog = {}
+
+n = int(input())
+for _ in range(n):
+    book_title = input().strip()
+    author_name = input().strip()
+    book_catalog[book_title] = author_name
+
+print(book_catalog.keys())
+print(book_catalog.values())
+print(book_catalog.items())
