@@ -1,0 +1,31 @@
+# Read the number of orders
+num_orders = int(input())
+
+# Validate the number of orders
+if num_orders < 1 or num_orders > 100:
+    print("Number of orders should be between 1 and 100")
+else:
+    # Initialize a dictionary to hold item quantities
+    order_dict = {}
+
+    # Process each order
+    for _ in range(num_orders):
+        item_name = input().strip()  # Read item name
+        quantity = int(input().strip())  # Read quantity ordered
+
+        # Validate the quantity
+        if quantity < 1 or quantity > 100:
+            print("Quantity should be between 1 and 100")
+            break
+        else:
+            # Update the total quantity for the item
+            if item_name in order_dict:
+                order_dict[item_name] += quantity
+            else:
+                order_dict[item_name] = quantity
+
+    # Convert the dictionary to a list of tuples
+    result = list(order_dict.items())
+
+    # Print the result
+    print(result)
