@@ -1,0 +1,19 @@
+def calculate_net_balance(transactions):
+    user_balance = {}
+    for transaction in transactions:
+        user = transaction["user"]
+        amount = transaction["amount"]
+        transaction_type = transaction["transaction_type"]
+        
+        if user in user_balance:
+            if transaction_type == "credit":
+                user_balance[user] += amount
+            elif transaction_type == "debit":
+                user_balance[user] -= amount
+        else:
+            if transaction_type == "credit":
+                user_balance[user] = amount
+            elif transaction_type == "debit":
+                user_balance[user] = -amount
+    
+    return user_balance
