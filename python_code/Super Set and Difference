@@ -1,0 +1,13 @@
+a = set(input().split())
+
+b = set(input().split())
+
+print(a.issubset(b))
+
+print(sorted(a - b))
+
+print(b.issubset(a))
+
+print(sorted(b - a))
+
+print(sorted(a ^ b))
