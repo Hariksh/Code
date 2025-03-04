@@ -1,0 +1,11 @@
+def count_books_by_category(book_catalog):
+    fiction_books = book_catalog["fiction"]
+    non_fiction = book_catalog["non-fiction"]
+    count1 = 0
+    count2 = 0
+    for i in fiction_books:
+        count1 +=1
+    for j in non_fiction:
+        count2 +=1
+    print(count1)
+    print(count2)
