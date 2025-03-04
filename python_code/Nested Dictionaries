@@ -1,0 +1,18 @@
+n = int(input())
+fiction_dict = {}
+for i in range(n):
+    book_name = input()
+    author_name = input()
+    fiction_dict[book_name] = author_name
+
+m = int(input()) 
+non_fiction_dict = {}   
+for i in range(m):
+    book_name = input()
+    author_name = input()
+    non_fiction_dict[book_name] = author_name
+
+nested_dict = {"fiction" : fiction_dict, "non-fiction" : non_fiction_dict}
+print(nested_dict)
+print(nested_dict["fiction"])
+print(nested_dict["non-fiction"])
