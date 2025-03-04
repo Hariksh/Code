@@ -1,0 +1,17 @@
+current_set = set(input().split())
+
+q = int(input())
+
+for _ in range(q):
+    operation = input().split()
+
+    if operation[0] == 'a': 
+        current_set.add(operation[1])
+
+    elif operation[0] == 'u':  
+        current_set.update(operation[1:])  
+
+    elif operation[0] == 'r': 
+        current_set.discard(operation[1]) 
+
+print(sorted(current_set))
