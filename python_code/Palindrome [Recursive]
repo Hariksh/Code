@@ -1,0 +1,10 @@
+def is_palindrome(s):
+    if s == "":
+        return True
+    else:
+        if s[0] == s[-1]:
+            sub_problem = s[1: -1]
+            sub_problem_ans = is_palindrome(sub_problem)
+            return sub_problem_ans
+        else:
+            return False
