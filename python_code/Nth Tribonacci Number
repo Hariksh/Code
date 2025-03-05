@@ -1,0 +1,10 @@
+def triboncci(n):
+    if n == 1 or n == 2:
+        return 0
+    if n == 3:
+        return 1
+    else:
+        return triboncci(n-1) + triboncci(n-2) + triboncci(n-3)
+
+n = int(input())
+print(triboncci(n))
