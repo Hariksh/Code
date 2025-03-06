@@ -1,0 +1,5 @@
+def recursive_length(lst):
+   if lst == []:
+      return 0
+   else:
+      return 1 + recursive_length(lst[1:])
