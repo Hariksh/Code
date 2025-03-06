@@ -1,0 +1,42 @@
+class Playlist:
+    def __init__(self):
+        self.songs = []
+    
+    def add_song(self, title):
+        if title in self.songs:
+            print("Song already exists in the playlist!")
+        else:
+            self.songs.append(title)
+            print("Song added successfully!")
+    
+    def remove_song(self, title):
+        if title in self.songs:
+            self.songs.remove(title)
+            print("Song removed successfully!")
+        else:
+            print("Song not found!")
+    
+    def view_playlist(self):
+        if not self.songs:
+            print("The playlist is empty.")
+        else:
+            print("Playlist:")
+            for song in self.songs:
+                print(song)
+
+def main():
+    playlist = Playlist()
+    
+    n = int(input())  
+    for _ in range(n):
+        song = input().strip()
+        playlist.add_song(song)
+    
+    m = int(input())  
+    for _ in range(m):
+        song = input().strip()
+        playlist.remove_song(song)
+    
+    playlist.view_playlist()
+
+main()
