@@ -1,0 +1,26 @@
+class Book:
+    def __init__(self, title, author, price):
+        self.title = title
+        self.author = author
+        self.price = float(price) 
+    
+    def apply_discount(self, percent):
+        discount_amount = (self.price * percent) / 100
+        self.price -= discount_amount
+        print(f"{self.price:.1f}")  
+
+def main():
+    title = input().strip()
+    author = input().strip()
+    price = input().strip()
+    discount_percent = float(input().strip())
+    
+    book = Book(title, author, price)
+    
+    print(book.title)
+    print(book.author)
+    print(f"{book.price:.1f}")  
+    
+    book.apply_discount(discount_percent)
+
+main()
