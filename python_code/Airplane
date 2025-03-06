@@ -1,0 +1,36 @@
+import datetime
+
+class Airplane:
+    def __init__(self, flight_number, destination, scheduled_departure_time):
+        self.flight_number = flight_number
+        self.destination = destination
+        self.scheduled_departure_time = datetime.datetime.strptime(scheduled_departure_time, "%I:%M %p")
+
+    def check_status(self, actual_departure_time):
+        actual_departure_time = datetime.datetime.strptime(actual_departure_time, "%I:%M %p")
+        if actual_departure_time <= self.scheduled_departure_time:
+            return "On time"
+        else:
+            return "Delayed"
+
+    def calculate_delay(self, actual_departure_time):
+        actual_departure_time = datetime.datetime.strptime(actual_departure_time, "%I:%M %p")
+        delay_seconds = (actual_departure_time - self.scheduled_departure_time).total_seconds()
+        delay_minutes = int(delay_seconds // 60)
+        return f"{delay_minutes} minutes" if delay_minutes > 0 else "No delay"
+
+if __name__ == "__main__":
+    flight_number = input()
+    destination = input()
+    scheduled_departure_time = input()
+    actual_departure_time = input()
+
+    try:
+        airplane = Airplane(flight_number, destination, scheduled_departure_time)
+        status = airplane.check_status(actual_departure_time)
+        delay = airplane.calculate_delay(actual_departure_time)
+
+        print(status)
+        print(delay)
+    except ValueError as e:
+        print("Invalid input format:", e)
