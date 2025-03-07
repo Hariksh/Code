@@ -1,0 +1,37 @@
+class Restaurant:
+    def __init__(self):
+        self.menu = {}
+    
+    def add_item(self, name, price):
+        self.menu[name] = price
+        print("Item added/updated successfully")
+    
+    def remove_item(self, name):
+        if name in self.menu:
+            del self.menu[name]
+            print("Item removed successfully")
+        else:
+            print("Item not found")
+    
+    def display_menu(self):
+        if not self.menu:
+            print("The menu is empty.")
+        else:
+            print("Menu:")
+            for item, price in self.menu.items():
+                print(f"{item}: {price}")
+
+
+def main():
+    restaurant = Restaurant()
+    for _ in range(3):
+        name, price = input().split()
+        price = int(price)
+        restaurant.add_item(name, price)
+    
+    item_to_remove = input().strip()
+    restaurant.remove_item(item_to_remove)
+    
+    restaurant.display_menu()
+
+main()
