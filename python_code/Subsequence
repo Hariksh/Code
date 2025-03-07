@@ -1,0 +1,16 @@
+l = []
+def Sub(s,i,ans):
+    if(i>=len(s)):
+        l.append(ans)
+        return
+    Sub(s,i+1,ans+s[i])
+    Sub(s,i+1,ans)
+s = input()
+ans = ""
+Sub(s,0,ans)
+l.sort()
+for ele in l:
+    if(ele==""):
+        continue
+    else:
+        print(ele,end=" ")
