@@ -1,0 +1,7 @@
+n = int(input())  
+my_set = set(int(input()) for i in range(n))
+target = int(input())
+if target in my_set:
+    print("YES")
+else:
+    print("NO")
