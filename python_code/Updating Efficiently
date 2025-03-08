@@ -1,0 +1,10 @@
+lis = list(map(int,input().split()))
+
+q = int(input())
+
+for i in range(q):
+    query,v = map(int,input().split())
+    if query == 1:
+        lis.append(v)
+    else:
+        print(lis.count(v))
