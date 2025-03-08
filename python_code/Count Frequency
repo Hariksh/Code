@@ -1,0 +1,8 @@
+lis = list(map(int,input().split()))
+d = {}
+for value in lis:
+    if value not in d:
+        d[value] = 1
+    else:
+        d[value] += 1
+print(d)
