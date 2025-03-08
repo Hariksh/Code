@@ -1,0 +1,6 @@
+def get_posts_of_user(posts, username):
+    result = []
+    for post in posts:
+        if post['username'] == username:
+            result.append(post)
+    return result
