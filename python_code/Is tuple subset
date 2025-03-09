@@ -1,0 +1,17 @@
+def is_subset(sub, main):
+
+    '''for val in sub:
+        count = 0 
+        for k in main:
+            if k == val:
+                count+=1
+        if count == 0:
+            return False
+    return True'''
+
+    for val in sub:
+
+        if val not in main:
+            return False
+
+    return True
