@@ -1,0 +1,20 @@
+def get_username(user_data):
+    return user_data["username"]
+
+def get_short_bio(user_data):
+    return user_data["short bio"]
+    
+def get_location(user_data):
+    return user_data["location"]
+
+def get_verification_status(user_data):
+    return user_data["verification status"]
+
+def get_follower_count(user_data):
+    return user_data["follower count"]
+
+def get_following_count(user_data):
+    return user_data["following count"]
+
+def get_joining_date(user_data):
+    return user_data["joining date"]
