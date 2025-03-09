@@ -1,0 +1,11 @@
+def count_and_index(numbers, target):
+    count = 0
+    first_occ = -1
+    for ind in range(len(numbers)):
+        val = numbers[ind]
+        if val == target:
+            count = count + 1
+            if first_occ == -1:
+                first_occ = ind
+    ans_tup = (count,first_occ)
+    return ans_tup
