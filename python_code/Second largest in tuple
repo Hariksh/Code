@@ -1,0 +1,11 @@
+def second_largest(tup):
+    a = -1
+    b = -1
+    
+    for num in tup:
+        if num > a:
+            b = a
+            a = num
+        elif num > b and num!= a:
+            b = num
+    return b
