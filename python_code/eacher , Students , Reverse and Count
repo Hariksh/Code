@@ -1,0 +1,12 @@
+def process_names(names_list):
+    i=len(names_list)-1
+    while i>=0:
+        print(names_list[i],end=" ")
+        i=i-1
+    print()
+    count=0
+    for name in names_list:
+        c=name[0]
+        if c=="A" or c=="E" or c=="I" or c=="O" or c=="U":
+            count=count+1
+    print(count)
