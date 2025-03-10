@@ -1,0 +1,12 @@
+data = list(map(int, input().split()))
+key = int(input())
+
+found = False
+for i in range(len(data)):
+    if data[i] == key:
+        print(i)
+        found = True
+        break
+
+if not found:
+    print("No malicious packet")
