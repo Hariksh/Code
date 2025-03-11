@@ -1,0 +1,14 @@
+captain_army = input().split()
+brother_army = input().split()
+
+new_army = captain_army + brother_army
+print(new_army)
+
+multiplied_army = new_army * 3
+print(multiplied_army)
+
+has_archer = "Archer" in new_army
+print(has_archer)
+
+has_enemy = "Enemy" in new_army
+print(not has_enemy)
