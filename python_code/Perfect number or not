@@ -1,0 +1,6 @@
+def checkPerfectNumber(num):
+    _sum=0
+    for i in range (1,num):
+        if num%i==0:
+            _sum+=i
+    return _sum==num
