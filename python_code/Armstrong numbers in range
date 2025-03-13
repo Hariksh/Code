@@ -1,0 +1,23 @@
+def is_arnstrong(n):
+    temp = n
+    digit_count = 0
+    while temp>0:
+        l = temp%10
+        digit_count=digit_count+1
+        temp = temp//10
+    temp = n 
+    sum = 0
+    while temp>0:
+        last_digit = temp%10
+        sum+= last_digit**digit_count
+        temp= temp//10
+    if sum==n:
+        return True
+    else:
+        return False
+
+
+def print_armstrong_numbers_in_range(A, B):
+    for i in range(A,B+1):
+        if is_arnstrong(i):
+            print(i, end = " ")
