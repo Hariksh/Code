@@ -1,0 +1,6 @@
+def sum_of_evens_in_range(a, b):
+    p=0
+    for i in range(a,b+1):
+        if i%2==0:
+            p=p+i
+    return p
