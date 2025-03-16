@@ -1,0 +1,15 @@
+def calculate_item_value():
+    a,b= input().split()
+    return int(a)*int(b)
+
+def calculate_total_inventory_value():
+    val1=calculate_item_value()
+    val2=calculate_item_value()
+    val3=calculate_item_value()
+    
+    return val1+val2+val3
+
+
+
+#print the total inventory value
+print(calculate_total_inventory_value())
