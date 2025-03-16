@@ -1,0 +1,28 @@
+def adjust_price(price):
+    return round(price)
+
+def price_difference(price1, price2):
+    return abs(price1-price2)
+
+def find_minimum_price(price1, price2, price3):
+    return min(price1, price2, price3)
+
+def find_maximum_price(price1, price2, price3):
+    return max(price1, price2, price3)
+
+def print_price_details(price1, price2, price3):
+    a1=adjust_price(price1)
+    a2=adjust_price(price2)
+    a3=adjust_price(price3)
+    print("Adjusted Prices:",a1,a2,a3)
+    print("Price Difference:",price_difference(price1, price2))
+    print("Minimum Price:",find_minimum_price(price1, price2, price3))
+    print("Maximum Price:",find_maximum_price(price1, price2, price3))
+
+
+price1=float(input())
+price2=float(input())
+price3=float(input())
+
+
+print_price_details(price1, price2, price3)
