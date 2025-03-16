@@ -1,0 +1,7 @@
+def calculate_distance(x1, y1, x2, y2):
+    x_dif=x2-x1
+    y_dif=y2-y1
+    a=x_dif**2
+    b=y_dif**2
+    s=(a+b)**(1/2)
+    return round(s,2)
