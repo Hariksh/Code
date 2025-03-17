@@ -1,0 +1,12 @@
+n = int(input())
+grades = []
+
+for i in range(n):
+    grade = int(input())  
+    grades.append(grade) 
+
+total_marks = sum(grades) 
+average_marks = total_marks / n  
+
+
+print(round(average_marks, 1))
