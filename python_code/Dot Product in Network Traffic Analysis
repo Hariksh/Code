@@ -1,0 +1,9 @@
+n = int(input())
+vector1 = list(map(int, input().split()))
+vector2 = list(map(int, input().split()))
+
+dot_product = 0
+for i in range(n):
+    dot_product += vector1[i] * vector2[i]
+
+print(dot_product)
