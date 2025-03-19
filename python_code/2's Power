@@ -1,0 +1,11 @@
+N = int(input())
+
+if N > 0:
+    while N % 2 == 0:
+        N = N // 2
+    if N == 1:
+        print("YES")
+    else:
+        print("NO")
+else:
+    print("NO")
