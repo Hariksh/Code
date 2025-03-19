@@ -1,0 +1,25 @@
+n = int(input()) 
+
+
+matrix = []
+for _ in range(n):
+    row = list(map(int, input().split()))
+    matrix.append(row)
+
+upper_triangular = [[0] * n for _ in range(n)]
+lower_triangular = [[0] * n for _ in range(n)]
+
+for i in range(n):
+    for j in range(i, n):  
+        upper_triangular[i][j] = matrix[i][j]
+
+for i in range(n):
+    for j in range(0, i + 1):  
+        lower_triangular[i][j] = matrix[i][j]
+
+for row in upper_triangular:
+    print(*row) 
+print()
+
+for row in lower_triangular:
+    print(*row)
