@@ -1,0 +1,25 @@
+n = int(input()) 
+m = int(input()) 
+commands = input().split() 
+
+row, col = 0, 0
+
+directions = {
+    "UP": (-1, 0),
+    "DOWN": (1, 0),
+    "LEFT": (0, -1),
+    "RIGHT": (0, 1)
+}
+
+for command in commands:
+    dr, dc = directions[command]
+    
+  
+    row += dr
+    col += dc
+    
+    if row < 0 or row >= n or col < 0 or col >= n:
+        print(-1)
+        break
+else:
+    print([row, col])
