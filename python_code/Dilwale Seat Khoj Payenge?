@@ -1,0 +1,14 @@
+N = int(input())
+
+S = N % 8
+
+if S == 1 or S == 4:
+    print("Lower")
+elif S == 2 or S == 5:
+    print("Middle")
+elif S == 3 or S == 6:
+    print("Upper")
+elif S == 7:
+    print("Side Lower")
+elif S == 0:
+    print("Side Upper")
