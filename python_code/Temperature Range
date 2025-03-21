@@ -1,0 +1,10 @@
+n = int(input())
+temp = []
+
+for i in range(n):
+    t = float(input())
+    temp.append(t)
+
+c = max(temp) - min(temp)
+
+print(round(c,1))
