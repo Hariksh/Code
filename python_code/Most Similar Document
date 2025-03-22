@@ -1,0 +1,25 @@
+n, m = map(int, input().split())
+
+documents = []
+for _ in range(n):
+    documents.append(list(map(float, input().split())))
+query = list(map(float, input().split()))
+
+def dot_product(vector1, vector2):
+    return sum(x * y for x, y in zip(vector1, vector2))
+
+def magnitude(vector):
+    return sum(x ** 2 for x in vector) ** 0.5
+max_similarity = -1
+best_document_index = -1
+
+for i in range(n):
+    doc = documents[i]
+    numerator = dot_product(doc, query)
+    denominator = magnitude(doc) * magnitude(query)
+    similarity = numerator / denominator if denominator != 0 else 0
+
+    if similarity > max_similarity:
+        max_similarity = similarity
+        best_document_index = i
+print(best_document_index)
