@@ -1,0 +1,14 @@
+n = int(input().strip())
+
+sequence = [0]
+
+for i in range(1, n):
+    prev = sequence[-1]
+    next_term = prev - i
+    if next_term > 0 and next_term not in sequence:
+        sequence.append(next_term)
+    else:
+        sequence.append(prev + i)
+
+
+print(sequence)
