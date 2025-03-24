@@ -1,0 +1,11 @@
+n = int(input())
+
+doors = [False] * n
+
+for person in range(2, n + 1):
+    for door in range(2 * person, n + 1, person):
+        doors[door - 1] = True  
+
+closed_doors = doors.count(False)
+
+print(closed_doors)
