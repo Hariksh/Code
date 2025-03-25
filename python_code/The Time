@@ -1,0 +1,11 @@
+current_time = input()
+a = int(input())
+
+hh, mm = map(int, current_time.split(':'))
+
+total_minutes = hh * 60 + mm + a
+
+new_hh = (total_minutes // 60) % 24  
+new_mm = total_minutes % 60  
+
+print(f"{new_hh:02}:{new_mm:02}")
