@@ -1,0 +1,10 @@
+n, m = map(int, input().split())
+
+triangles = 0
+if n >= 2:
+    triangles += (n * (n - 1) // 2) * m  
+
+if m >= 2:
+    triangles += (m * (m - 1) // 2) * n  
+
+print(triangles)
