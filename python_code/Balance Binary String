@@ -1,0 +1,16 @@
+N = int(input())
+if N % 2 != 0:
+    print(0)
+else:
+    a = N // 2
+    b = 1
+    c = 1
+
+    for i in range(2, N + 1):
+        b *= i
+    for i in range(2, a + 1):
+        c *= i
+        
+    result = b // (c * c)
+    
+    print(result)
