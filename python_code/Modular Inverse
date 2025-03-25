@@ -1,0 +1,15 @@
+A, M = map(int, input().split())
+
+m0, x0, x1 = M, 0, 1
+
+if M == 1:
+    print(-1)
+else:
+    while A > 1:
+        q = A // M
+        A, M = M, A % M
+        x0, x1 = x1 - q * x0, x0
+    if x1 < 0:
+        x1 += m0
+
+    print(x1 if A == 1 else -1)
