@@ -1,0 +1,25 @@
+# n = int(input())
+# s = input()
+# t = input()
+
+# if ("#" in s and "m" in t) or ("#" in t and "m" in s):
+#     print("Yes")
+# elif("*" in s and "n" in t) or ("*" in t and "n" in s):
+#     print("Yes")
+# else:
+#     print("No")
+
+n = int(input())
+s = input()
+t = input()
+
+similar = True
+
+for i in range(n):
+    if s[i] != t[i]:
+        if not ((s[i] == '#' and t[i] == 'm') or (s[i] == 'm' and t[i] == '#') or 
+                (s[i] == '*' and t[i] == 'n') or (s[i] == 'n' and t[i] == '*')):
+            similar = False
+            break
+
+print("Yes" if similar else "No")
