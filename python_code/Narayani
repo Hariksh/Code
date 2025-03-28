@@ -1,0 +1,22 @@
+# n = int(input())
+# lst = list(map(int,input().split()))
+# max_freq = 0
+
+# for i in range(len(lst)):
+#     a.count(lst[i])
+#     print(a)
+
+
+
+n = int(input())
+arr = list(map(int, input().split()))
+max_freq = 0
+lucky_number = None  
+
+for num in set(arr):  
+    freq = arr.count(num)  
+    if freq > max_freq or (freq == max_freq and (lucky_number is None or num < lucky_number)):
+        max_freq = freq
+        lucky_number = num
+
+print(lucky_number)
