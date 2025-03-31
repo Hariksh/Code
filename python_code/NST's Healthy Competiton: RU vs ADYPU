@@ -1,0 +1,32 @@
+def main():
+    print("cooperate")
+    opponent_defection_streak = 0
+    forgiveness_counter = 0  
+
+    while True:
+        ru_move = input()
+        if ru_move == "stop":
+            break
+
+        if ru_move == "defect":
+            opponent_defection_streak += 1
+            forgiveness_counter = 0  
+        elif ru_move == "cooperate":
+            opponent_defection_streak = 0
+            forgiveness_counter = max(0, forgiveness_counter - 1)  
+        else:
+            print()
+            continue
+
+        if opponent_defection_streak == 0:
+            our_move = "cooperate"  
+        elif opponent_defection_streak == 1 and forgiveness_counter < 1:
+            our_move = "cooperate"  
+            forgiveness_counter += 1
+        else:
+            our_move = "defect"  
+
+        print(our_move)
+
+if __name__ == "__main__":
+    main()
