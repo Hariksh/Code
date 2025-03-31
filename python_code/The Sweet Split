@@ -1,0 +1,12 @@
+S = input()
+
+if len(S) % 2 == 0:
+    a = S[:len(S)//2]
+    b = S[len(S)//2:]
+    
+    if a == b:
+        print("YES")
+    else:
+        print("NO")
+else:
+    print("NO")
