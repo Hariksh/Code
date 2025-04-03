@@ -1,0 +1,12 @@
+T = int(input())  
+for _ in range(T):
+    N = int(input())  
+    
+    row = []
+    value = 1 
+    
+    for k in range(N):
+        row.append(value)
+        value = value * (N - k - 1) // (k + 1)
+    
+    print(" ".join(map(str, row)))
