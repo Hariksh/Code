@@ -1,0 +1,9 @@
+Ra = input("")
+Rb = input("")
+Rc = input("")
+if Ra == ">" and Rb == ">" and Rc == ">" or Ra == "<" and Rb == "<" and Rc == "<":
+    print("Kunal")
+elif Ra == ">" and Rb== ">" and Rc == "<" or Ra == "<" and Rb =="<" and Rc == ">":
+    print("Animay")
+else:
+    print("Gladden")
