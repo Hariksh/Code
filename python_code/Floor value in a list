@@ -1,0 +1,25 @@
+# lst = list(map(int, input().split()))  
+# val = int(input())  
+
+# result = max(x for x in lst if x <= val)
+
+
+# print(result)
+
+# lst = list(map(int,input().split()))
+# val = int(input())
+
+# for x in lst:
+#     if x <= val:
+#         result = max(x)
+#     print(result)
+
+lst = list(map(int, input().split()))
+val = int(input())
+result = -1  
+
+for x in lst:
+    if x <= val:
+        result = max(result, x)
+
+print(result)
