@@ -1,0 +1,93 @@
+rating = int(input())
+_type = int(input())
+hack = int(input())
+if rating < 1200 and _type==1 and hack == 1:
+    print(rating + 200 + 50)
+elif rating< 1200 and _type==1 and hack ==2:
+    print(rating + 200)
+elif rating<1200 and _type == 2 and hack == 1:
+    print(rating+80+50)
+elif rating<1200 and _type ==2 and hack == 2:
+    print(rating+80)
+elif rating<1200 and _type == 3 and hack==1:
+    print(rating+50+50)
+elif rating<1200 and _type == 3 and hack==2:
+    print(rating+50)
+elif 1200<=rating<=2000 and _type == 1 and hack == 1:
+    print(rating+100+50)
+elif 1200<=rating<=2000 and _type == 1 and hack == 2:
+    print(rating+100)
+elif 1200<=rating<=2000 and _type == 2 and hack == 1:
+    print(rating+50)
+elif 1200<=rating<=2000 and _type == 2 and hack == 2:
+    print(rating)
+elif 1200<=rating<=2000 and _type == 3 and hack == 1:
+    print(rating-30+50)
+elif 1200<=rating<=2000 and _type == 3 and hack == 2:
+    print(rating-30)
+elif rating>2000 and _type == 1 and hack == 1:
+    print(rating+50+50)
+elif rating>2000 and _type == 1 and hack == 2:
+    print(rating+50)
+elif rating>2000 and _type == 2 and hack == 1:
+    print(rating-30+50)
+elif rating>2000 and _type == 2 and hack == 2:
+    print(rating-30)
+elif rating>2000 and _type == 3 and hack == 1:
+    print(rating-100+50)
+elif rating>2000 and _type == 3 and hack == 2:
+    print(rating-100)
+
+'''current_rating = int(input())
+contest_type = int(input())
+hacking_status = int(input())
+if current_rating < 1200:
+    if contest_type == 1:
+        if hacking_status == 1:
+            current_rating += 250
+        elif hacking_status ==2:
+            current_rating += 200
+    elif contest_type == 2:
+        if hacking_status == 1:
+            current_rating += 130
+        elif hacking_status ==2:
+            current_rating += 80
+    elif contest_type == 3:
+        if hacking_status == 1 :
+            current_rating += 100
+        elif hacking_status == 2:
+            current_rating += 50
+elif 1200 <= current_rating <= 2000:
+    if contest_type == 1:
+        if hacking_status == 1:
+            current_rating += 150
+        elif hacking_status == 2:
+            current_rating += 100
+    elif contest_type == 2:
+        if hacking_status ==1 :
+            current_rating += 50
+        elif hacking_status ==2:
+            current_rating = current_rating
+    elif contest_type ==3:
+        if hacking_status == 1:
+            current_rating += 20
+        elif hacking_status ==2 :
+            current_rating -= 30
+else :
+    if contest_type == 1:
+        if hacking_status == 1:
+            current_rating += 100
+        elif hacking_status == 2:
+            current_rating += 50
+    elif contest_type == 2:
+        if hacking_status == 1:
+            current_rating += 20
+        elif hacking_status ==2 :
+            current_rating -= 30
+    elif contest_type ==3:
+        if hacking_status == 1:
+            current_rating -= 50
+        elif hacking_status ==2 :
+            current_rating -= 100
+
+print(current_rating)'''
