@@ -1,0 +1,6 @@
+const v3 = "A"
+const v2 = "T"
+const v4 = "L"
+const v1 = "I"
+const v5 = "N"
+const v6 = "S"
