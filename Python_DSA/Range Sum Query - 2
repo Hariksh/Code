@@ -1,0 +1,10 @@
+lst = list(map(int,input().split()))
+n = int(input())
+add = 0
+for i in range(n):
+    l,r = map(int,input().split())
+    for j in range(l,r+1):
+        add += lst[j]
+
+    print(add)
+    add = 0
