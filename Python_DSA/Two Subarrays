@@ -1,0 +1,23 @@
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    A = list(map(int, input().split()))
+
+    left_max, right_max = [0] * n, [0] * n
+    current_sum = max_sum = 0
+
+    for i in range(n):
+        current_sum = max(0, current_sum + A[i])
+        max_sum = max(max_sum, current_sum)
+        left_max[i] = max_sum
+
+    current_sum = max_sum = 0
+
+    for i in range(n - 1, -1, -1):
+        current_sum = max(0, current_sum + A[i])
+        max_sum = max(max_sum, current_sum)
+        right_max[i] = max_sum
+
+    max_total_sum = max(left_max[i] + right_max[i + 1] for i in range(n - 1))
+    print(max(0, max_total_sum))
