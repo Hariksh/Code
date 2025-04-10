@@ -21,3 +21,40 @@ for _ in range(t):
 
     max_total_sum = max(left_max[i] + right_max[i + 1] for i in range(n - 1))
     print(max(0, max_total_sum))
+
+
+# t = int(input())
+# for i in range(t):
+#     n = int(input())
+#     A =  list(map(int, input().split()))
+#     left_max = [0] * n
+#     right_max = [0] * n
+    
+#     current_sum = 0
+#     max_sum = float('-inf')
+#     for i in range(n):
+#         current_sum += A[i]
+#         if current_sum > max_sum:
+#             max_sum = current_sum
+#         left_max[i] = max_sum
+#         if current_sum < 0:
+#             current_sum = 0  
+    
+#     current_sum = 0
+#     max_sum = float('-inf')
+#     for i in range(n - 1, -1, -1):
+#         current_sum += A[i]
+#         if current_sum > max_sum:
+#             max_sum = current_sum
+#         right_max[i] = max_sum
+#         if current_sum < 0:
+#             current_sum = 0  
+    
+#     max_total_sum = float('-inf')
+#     for i in range(n - 1):
+#         max_total_sum = max(max_total_sum, left_max[i] + right_max[i + 1])
+    
+#     if max_total_sum < 0:
+#         max_total_sum = 0
+    
+#     print(max_total_sum
