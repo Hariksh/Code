@@ -1,0 +1,15 @@
+target =int(input())
+lis = list(map(int,input().split()))
+left = 0
+summ = 0
+min_l = float("+inf")
+for right in range(len(lis)):
+    summ += lis[right]
+    while summ >= target :
+        summ -= lis[left]
+        min_l = min(right - left + 1 , min_l)
+        left += 1
+if min_l == float("+inf"):
+    print(0)
+else :
+    print(min_l)
