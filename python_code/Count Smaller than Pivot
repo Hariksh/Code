@@ -1,0 +1,7 @@
+class Solution:
+    def countSmallerThanPivot(self, arr, pivot):
+        count = 0
+        for j in range(0,len(arr)):
+            if arr[j] < pivot:
+                count += 1
+        return count
