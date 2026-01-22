@@ -1,0 +1,11 @@
+arr = list(map(int,input().split()))
+
+dict_ = {}
+
+for num in arr:
+    if num in dict_:
+        dict_[num] += 1
+    else:
+        dict_[num] = 1
+
+print(dict_)
