@@ -1,0 +1,9 @@
+def maxBook(W, weights):
+    res = 0
+    n = len(weights)
+    weights.sort()
+    for i in range(n):
+        if W >= weights[i]:
+            W -= weights[i]
+            res = res + 1
+    return res
