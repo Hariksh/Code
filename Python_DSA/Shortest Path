@@ -1,0 +1,24 @@
+import heapq
+def shortestPath(n, target, edges):
+    graph = [[] for _ in range(n)]
+
+    for (u,v,w) in edges:
+        graph[u].append((v,w))
+        graph[v].append((u,w))
+
+    dist = [float('inf')] * n
+    dist[0] = 0
+    min_ = [(0,0)]
+
+    while min_:
+        curr_dist , node = heapq.heappop(min_)
+        if curr_dist > dist[node]:
+            continue
+        for neigh, wt in graph[node]:
+            if dist[node] + wt < dist[neigh]:
+                dist[neigh] = dist[node] + wt
+                heapq.heappush(min_,(dist[neigh],neigh))
+        
+    if dist[target] != float('inf'):
+        return dist[target]
+    return -1
