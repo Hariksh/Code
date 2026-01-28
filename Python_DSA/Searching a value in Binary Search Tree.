@@ -1,0 +1,16 @@
+"""
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+"""
+def searchBST(root, x):
+    if root is None:
+        return 0
+    if root.val == x:
+        return 1  
+    if searchBST(root.left,x) or searchBST(root.right,x):
+        return 1
+    else:
+        return 0
