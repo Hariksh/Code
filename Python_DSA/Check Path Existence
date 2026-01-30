@@ -1,0 +1,20 @@
+from collections import deque
+def isSibling(n, x, y, edges):
+    graph=[[] for _ in range(n)]
+    for i,j in edges:
+        graph[i].append(j)
+        graph[j].append(i)
+    visit=[False]*n
+    res=[]
+    def dfs(node):
+        visit[node]=True
+        res.append(node)
+        for nei in graph[node]:
+            if not visit[nei]:
+                dfs(nei)
+    for i in range(n):
+        if not visit[i] and x not in res and (y not in res):
+            dfs(i)
+    if x in res and y in res:
+        return True
+    return False
