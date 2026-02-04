@@ -1,0 +1,77 @@
+# def longestCommonIncreasingSubsequence(A,B):
+#     n = len(A)
+#     A_inc = [1] * n
+#     m = len(B)
+#     B_inc = [1] * m
+#     for i in range(n):
+#         for j in range(i):
+#             if A[j] < A[i]:
+#                 A_inc[i] = max(A_inc[i], 1+A_inc[j])
+
+#     for i in range(m):
+#         for j in range(i):
+#             if B[j] < B[i]:
+#                 B_inc[i] = max(B_inc[i], 1+B_inc[j])
+    
+#     print(A_inc)
+#     print(B_inc)
+
+#     def helper(l,r):
+#         if l >= len(A_inc) or r >= len(B_inc):
+#             return 0
+
+#         if A_inc[l] == B_inc[r]:
+#             return 1 + helper(l+1,r+1)
+
+#         a = helper(l+1,r)
+#         b = helper(l,r+1)
+
+#         return max(a,b)
+
+#     return helper(0,0)
+
+def longestCommonIncreasingSubsequence(A, B):
+    n = len(A)
+    m = len(B)
+
+    # Step 1: Compute LIS arrays (your idea)
+    A_inc = [1] * n
+    B_inc = [1] * m
+
+    for i in range(n):
+        for j in range(i):
+            if A[j] < A[i]:
+                A_inc[i] = max(A_inc[i], 1 + A_inc[j])
+
+    for i in range(m):
+        for j in range(i):
+            if B[j] < B[i]:
+                B_inc[i] = max(B_inc[i], 1 + B_inc[j])
+
+    # Step 2: Recursive helper with manual memo
+    memo = {}
+
+    def helper(l, r, last):
+        key = (l, r, last)
+        if key in memo:
+            return memo[key]
+
+        if l == len(A) or r == len(B):
+            return 0
+
+        best = 0
+        
+        # skip A[l]
+        best = max(best, helper(l+1, r, last))
+        
+        # skip B[r]
+        best = max(best, helper(l, r+1, last))
+
+        # if values match and are increasing
+        if A[l] == B[r] and A[l] > last:
+            best = max(best, 1 + helper(l+1, r+1, A[l]))
+
+        memo[key] = best
+        return best
+
+    return helper(0, 0, -10**18)
