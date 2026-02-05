@@ -1,0 +1,32 @@
+import heapq
+def minCostToConnectCity(n, existingRoads, proposedRoads):
+
+    graph = [[] for _ in range(n)]
+
+    for (u,v,w) in proposedRoads:
+        graph[u].append((v,w))
+        graph[v].append((u,w))
+    
+    for (u,v) in existingRoads:
+        graph[u].append((v,0))
+        graph[v].append((u,0))
+
+    visited = [False] * n
+    total_wei = 0
+    min_heap = [(0,1)]
+
+    while min_heap:
+        wei, node = heapq.heappop(min_heap)
+        if visited[node]:
+            continue
+        visited[node]= True
+        total_wei += wei
+        for nei, wt in graph[node]:
+            if not visited[nei]:
+                heapq.heappush(min_heap,(wt,nei))
+
+    if sum(visited) == n:
+        return total_wei
+    else:
+        return -1
+    # return proposedRoads
