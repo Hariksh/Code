@@ -1,0 +1,24 @@
+def minCoins(target, denominations):
+    memo = {}
+
+    def helper(i, target):
+        if target == 0:
+            return 0
+        if i == len(denominations) or target < 0:
+            return float('inf')
+        
+        if (i,target) in memo:
+            return memo[(i,target)]
+
+        take = helper(i, target-denominations[i]) + 1
+        not_take = helper(i+1, target)
+
+        memo[(i,target)] = min(take,not_take)
+        return memo[(i,target)]
+
+    ans = helper(0, target)
+
+    if ans != float('inf'):
+        return ans
+    else:
+        return -1
