@@ -1,0 +1,21 @@
+dp = {}
+def helper(word1, word2, n,m):
+    if n == 0:
+        return m
+    if m == 0: 
+        return n
+    if (n,m) in dp:
+        return dp[(n,m)]
+    if word1[n-1] == word2[m-1]:
+        return helper(word1, word2, n-1, m-1)
+    
+    else:
+        insert = 1 + helper(word1,word2, n, m-1)
+        delete = 1 + helper(word1,word2,n-1,m)
+        replace = 1 + helper(word1,word2,n-1,m-1)
+    dp[(n,m)] = min(insert,delete,replace)
+    return  dp[(n,m)]
+    
+
+def minDistance(word1, word2):
+    return helper(word1,word2,len(word1),len(word2))
