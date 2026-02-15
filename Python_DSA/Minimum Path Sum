@@ -1,0 +1,22 @@
+def minPathSum(grid):
+    m = len(grid)
+    n = len(grid[0])
+    dp = {}
+
+    def helper(i,j):
+        if i < 0 or j < 0:
+            return float('inf')
+
+        if i == 0 and j == 0:
+            return grid[0][0]
+        
+        if (i,j) in dp:
+            return dp[(i,j)]
+
+        a = helper(i-1,j)
+        b = helper(i,j-1)
+
+        dp[(i,j)] =  grid[i][j] + min(a,b)
+        return dp[(i,j)]
+
+    return helper(m-1,n-1)
