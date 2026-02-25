@@ -1,0 +1,15 @@
+def findMinArrowShots(points):
+    if not points:
+        return 0
+
+    def get_end(interval):
+        return interval[1]
+
+    points.sort(key=get_end)
+    arrows = 1
+    last_end = points[0][1]
+    for start, end in points[1:]:
+        if start > last_end:
+            arrows += 1
+            last_end = end
+    return arrows
