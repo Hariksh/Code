@@ -1,0 +1,8 @@
+def minNumberOperations(target):
+    prev = 0
+    ans = 0
+    for curr in target:
+        if curr > prev:
+            ans += curr - prev
+        prev = curr
+    return ans
