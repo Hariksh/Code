@@ -1,0 +1,18 @@
+def count(coins, N, target):
+    dp = {}
+
+    def helper(i, target):
+        if target == 0:
+            return 1
+        if i == N or target < 0:
+            return 0
+        if (i,target) in dp:
+            return dp[(i,target)]
+
+        take = helper(i, target-coins[i])
+        not_take = helper(i+1, target)
+
+        dp[(i,target)] = take+not_take
+        return dp[(i,target)]
+
+    return helper(0,target)
