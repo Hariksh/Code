@@ -1,0 +1,15 @@
+def rob(nums): 
+    dp = {}     
+    
+    def helper(i):
+        if i >= len(nums):
+            return 0
+        if i in dp:
+            return dp[(i)]
+        take = nums[i] + helper(i+2)
+        not_take = helper(i+1)
+
+        dp[(i)] = max(take,not_take)
+        return dp[(i)]
+
+    return helper(0)
