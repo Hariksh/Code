@@ -1,0 +1,41 @@
+def minCoins(value, coins):
+    dp = {}
+
+    def helper(i,target):
+        if target == 0:
+            return 0
+        if i >= len(coins) or target < 0:
+            return float('inf')
+        
+        if (i,target) in dp:
+            return dp[(i,target)]
+        take = 1 + helper(i,target-coins[i])
+        skip = helper(i+1,target)
+
+        dp[(i,target)] = min(skip,take)
+        return dp[(i,target)]
+
+    ans = helper(0,value)
+    if ans == float('inf'):
+        return -1
+    else:
+        return ans
+
+# def minCoins(value, coins):
+#     dp = {}
+
+#     def solve(index, target):
+#         if target == 0:
+#             return 0
+#         if index >= len(coins) or target < 0:
+#             return float('inf')
+#         if (index, target) in dp:
+#             return dp[(index, target)]
+
+#         take = 1 + solve(index, target - coins[index])
+#         skip = solve(index + 1, target)
+#         dp[(index, target)] = min(take, skip)
+#         return dp[(index, target)]
+
+#     ans = solve(0, value)
+#     return ans if ans != float('inf') else -1
