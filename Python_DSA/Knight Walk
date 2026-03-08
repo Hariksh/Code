@@ -1,0 +1,26 @@
+def knightWalk(n, m, s1, s2, d1, d2):
+    if s1 == d1 and s2 == d2:
+        return 0
+
+    moves = [
+        (2, 1), (2, -1), (-2, 1), (-2, -1),
+        (1, 2), (1, -2), (-1, 2), (-1, -2)
+    ]
+    
+    queue = [(s1, s2, 0)]
+    
+    visited = [[False] * m for _ in range(n)]
+    visited[s1][s2] = True
+
+    while queue:
+        x, y, dist = queue.pop(0)
+
+        for dx, dy in moves:
+            nx, ny = x + dx, y + dy
+            if 0 <= nx < n and 0 <= ny < m and not visited[nx][ny]:
+                if nx == d1 and ny == d2:
+                    return dist + 1
+                visited[nx][ny] = True
+                queue.append((nx, ny, dist + 1))
+    
+    return -1
