@@ -1,0 +1,24 @@
+from collections import deque
+
+def shortestDistance(n, edges, src,dst):
+    graph = [[] for _ in range(n)]
+
+    for u,v in edges:
+        graph[u].append(v)
+        graph[v].append(u)
+
+    dist = [float('inf')] * n
+    dist[src] = 0
+    qu = deque([src])
+
+    while qu:
+        node = qu.popleft()
+        for nei in graph[node]:
+            if dist[nei] == float('inf'):
+                dist[nei] = dist[node] + 1
+                qu.append(nei)
+
+    if dist[dst] == float('inf'):
+        return -1
+    else:
+        return dist[dst]
