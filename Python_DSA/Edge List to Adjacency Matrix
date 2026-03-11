@@ -1,0 +1,9 @@
+def convertToAdjMatrix(n, edgeList):
+
+  matrix = [[0]* n for i in range(n)]
+
+  for i,j in edgeList:
+    matrix[i][j] = 1
+    matrix[j][i] = 1
+
+  return matrix
