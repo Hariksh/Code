@@ -1,0 +1,15 @@
+def palindrome_partitions(s):
+    res = []
+    curr_path = []
+    def helper(s):
+        if not s:
+            res.append(curr_path[:])
+            return 
+        for i in range(len(s)):
+            left = s[:i+1]
+            if left == left[::-1]:
+                curr_path.append(left)
+                helper(s[i+1:])
+                curr_path.pop()
+    helper(s)
+    return res
